@@ -1,8 +1,14 @@
+import math
 num = int(input())
-if num < 0:
-    mod_num = num * (-1)
-    number = mod_num % 10
-else:
-     number = num % 10
+num = math.fabs(num)
 
-print(number)
+count = 1
+num = num // 10
+
+while num > 0:
+    num //= 10
+    count += 1
+
+
+print(count)
+
