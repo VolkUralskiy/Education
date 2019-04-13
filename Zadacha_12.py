@@ -1,8 +1,9 @@
 value = input()
-num = int(input())
-num_value = int(input())
-for i in range(num, num_value):
-    if value[0] == value[value.__len__()-1]:
-         print('palindrom')
-    else:
-       print('it is not palindrom')
+def Is_Palindrome(value):
+    value_len = len(value)
+    for i in range(value_len // 2):
+         if value[i] != value[len(value) - 1 - i]:
+             return 'not palindrom'
+    return 'it is palindrom'
+
+print(Is_Palindrome(value))
