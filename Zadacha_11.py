@@ -1,7 +1,11 @@
-num_oun = int(input())
+num_one = int(input())
 num_two = int(input())
-num_three = int(input())
-if num_oun % num_three == 0 or num_two % num_three == 0:
-     print(True)
-else:
-    print(False)
+
+while num_one != 0 and num_two != 0:
+    if num_one > num_two:
+        num_one %= num_two
+    else:
+        num_two %= num_one
+
+result = num_one + num_two
+print(result)
