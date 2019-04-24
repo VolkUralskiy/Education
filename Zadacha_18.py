@@ -1,5 +1,6 @@
 val = int(input())
-if val / val == 1:
-    print("It is prime number")
-else:
-    print('It not prime number')
+for i in range(2, val):
+    if val % i != 0:
+       print('It not prime number')
+    else:
+        print("It is prime number")
